@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Pikachu{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">  <!-- Pastikan Anda memiliki file styles.css di folder static -->
+</head>
+<body>
+    <div class="top-bar">
+        <div class="search-container">
+            <input type="text" placeholder="Cari...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="auth-links">
+            <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i> (0)</a>
+            <a href="#" class="login">Masuk</a>
+        </div>
+    </div>
+    <nav>
+        <div class="logo">
+            <a class="pikachulogo" href="#">
+                <img src="{% static 'img/logo.svg' %}" alt="Pika" width="100" height="100">
+            </a>
+        </div>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Produk</a></li>
+            <li><a href="">Kategori</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Kategori</a></li>
+        </ul>
+
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Selamat datang di Pikachu!</h1>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 Pikachu</p>
+    </footer>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
